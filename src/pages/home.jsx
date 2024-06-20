@@ -11,10 +11,10 @@ const Home = () => {
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        let url = `https://newsapi.org/v2/top-headlines?category=${category}&country=in&apiKey=298589f984d848298640908e988a6c00`;
+        let url = `https://newsapi.org/v2/top-headlines?category=${category}&country=in&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`;
 
         if (searchQuery) {
-          url = `https://newsapi.org/v2/everything?q=${searchQuery}&apiKey=298589f984d848298640908e988a6c00`;
+          url = `https://newsapi.org/v2/everything?q=${searchQuery}&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`;
         }
 
         const response = await axios.get(url);
