@@ -11,16 +11,18 @@ const Home = () => {
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        let url = `https://newsapi.org/v2/top-headlines?category=${category}&country=in&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`;
+        const apiKey = process.env.REACT_APP_NEWS_API_KEY;
+        let url = `https://newsapi.org/v2/top-headlines?category=${category}&country=in&apiKey=${apiKey}`;
 
         if (searchQuery) {
-          url = `https://newsapi.org/v2/everything?q=${searchQuery}&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`;
+          url = `https://newsapi.org/v2/everything?q=${searchQuery}&apiKey=${apiKey}`;
         }
 
         const response = await axios.get(url);
         setArticles(response.data.articles);
       } catch (error) {
         console.error("Error fetching articles:", error);
+        <h1 className="text-center text-gray-500 mt-40">Opps something went wrong</h1>
       }
     };
 
