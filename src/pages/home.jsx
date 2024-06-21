@@ -64,7 +64,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="fixed w-screen flex flex-col md:flex-row gap-6 items-center justify-between p-10 bg-slate-100 mb-10 drop-shadow-md">
+      <div className="relative md:fixed w-screen flex flex-col md:flex-row gap-6 items-center justify-between p-10 bg-slate-100 mb-10 drop-shadow-md">
         <h1 className="text-2xl font-bold mb-4 drop-shadow-lg">
           News Articles
         </h1>
@@ -115,7 +115,7 @@ const Home = () => {
           </div>
         ) : (
           <>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-96 md:mt-40">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-30 md:mt-40">
               {error ? (
                 <h1 className="text-center text-gray-500 mt-40">{error}</h1>
               ) : (
