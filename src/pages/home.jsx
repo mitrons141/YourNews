@@ -106,6 +106,7 @@ const Home = () => {
                 </a>
                 <img
                   src="./star.png"
+                  alt="add"
                   onClick={() => handleFavorite(article)}
                   className="rounded mt-2 w-8 h-8 cursor-pointer hover:drop-shadow-lg"
                 />

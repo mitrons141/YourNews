@@ -44,6 +44,7 @@ const Favorites = () => {
                   </a>
                   <img
                     src="./minus.png"
+                    alt="remove"
                     onClick={() => handleRemoveFavorite(index)}
                     className="rounded mt-2 ml-2 mr-2 w-6 h-6 cursor-pointer hover:drop-shadow-lg"
                   />
