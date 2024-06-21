@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import "./home.css"
 
 const Home = () => {
   const [articles, setArticles] = useState([]);
@@ -111,7 +112,7 @@ const Home = () => {
       <div className="container mx-auto p-4">
         {loading ? (
           <div className="flex justify-center items-center mt-40">
-            <div className="loader">loading...</div>
+            <div className="loader"></div>
           </div>
         ) : (
           <>
