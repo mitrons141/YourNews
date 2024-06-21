@@ -1,3 +1,4 @@
+// src/pages/Favorites.js
 import React, { useEffect, useState } from "react";
 
 const Favorites = () => {
@@ -27,9 +28,9 @@ const Favorites = () => {
             {favorites.map((article, index) => (
               <div key={index} className="border rounded shadow p-4">
                 <h2 className="text-xl font-bold mb-2">{article.title}</h2>
-                {article.urlToImage && (
+                {article.image && (
                   <img
-                    src={article.urlToImage}
+                    src={article.image}
                     alt={article.title}
                     className="w-full h-48 object-cover mb-2"
                   />
@@ -39,6 +40,8 @@ const Favorites = () => {
                   <a
                     href={article.url}
                     className="text-blue-500 hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Read More
                   </a>
